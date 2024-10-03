@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.heart{
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    transform: rotate(-45deg);
+    position: relative;
+    box-shadow: -40px 40px 110px red;
+    animation: kranthi 1s linear infinite;
+    left: 22%;
+    z-index: 2;
+
+}
+.heart::before{
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    top: -50%;
+    position: absolute;
+    border-radius: 50px;
+    content: "";
+
+}
+.heart::after{
+    height: 70px;
+    width: 70px;
+    background-color:red;
+    right: -50%;
+    position: absolute;
+    border-radius: 50px;
+    content: "";
+
+}
+@keyframes kranthi {
+    0%{
+transform: rotate(-45deg) scale(1.09);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+
+    }
+    100%{
+        transform: rotate(-45deg) scale(1.02);
+    }
+    
+}
+.circle{
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    animation: kiran 2s linear infinite;
+    border: 2px solid green;
+   
+   
+    
+
+}
+@keyframes kiran {
+    from{
+      transform: rotate(0);
+    }
+    to{
+        transform: rotate(360);
+        background-color: fuchsia;
+    }
+    
+}
+
+.box{
+    height: 400px;
+    width: 400px;
+    background-color: cyan;
+    position: relative;
+    animation:  roxie 2s linear infinite;
+    background-color: white;
+    right: 32.5%;
+    z-index: 1;
+    
+
+}
+@keyframes roxie {
+    from{
+     transform: rotate(0);
+    }
+    to{
+   transform: rotate(180);
+   
+    }
+}
